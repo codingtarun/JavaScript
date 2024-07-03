@@ -70,7 +70,8 @@ console.log(typeof null); // it will show `object` which is a bug and its not fi
 
 /**
  * 
- * Template Literals : Template literals, introduced in ES6, provide a more powerful way to create strings. They allow for embedded expressions, multiline strings, and string interpolation.
+ * Template Literals : Template literals, introduced in ES6, provide a more powerful way to create strings. 
+ * They allow for embedded expressions, multiline strings, and string interpolation.
  * 
  */
 
@@ -125,3 +126,59 @@ console.log('I am '+ AGE + ' years old'); // type coercion , AGE value converted
  * 
  * 
  */
+
+/**
+ * 
+ * Boolean Logic : uses true / fasle value to solve logical problems
+ * 
+ * &&(AND) : All conditions are true
+ * ||(OR) : All or one of the conditions is true
+ * !(NOT) :  Invert the true/false value
+ * 
+ */
+
+
+/**
+ * Switch Statement : Logic used when we have to switch based on multiple values
+ * It uses strict equality check `===`
+ * 
+ * 
+ */
+
+const day = 'Monday';
+
+switch(day) {
+    case 'Monday' : 
+        console.log(`It's monday`);
+        break;
+    case 'Other' : 
+        console.log(`It's not monday`);
+        break;
+    default : 
+        console.log(`Some other day`);
+}
+
+
+/**
+ * Statement & Expressions : 
+ * 
+ * Expression : Any valid unit of code that resolves to a value.
+ * ex : 3 + 4 , true , false etc 
+ * 
+ * Statement : Bigger piece of code/instruction that performs an action.
+ * ex : if / else statement , switch statement
+ * 
+ */
+
+
+/**
+ * 
+ * Ternary Operator / Conditional Operator  : one line if-else statement
+ * Syntex : CONDITION ? CONDITION TRUE BLOCK : CONDITION FALSE BLOCK
+ * 
+ */
+
+const age = 18;
+
+age >= 18 ? console.log(`You are allowed to drive`) : console.log(`You are not allowed to drive`);
+
