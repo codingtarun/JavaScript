@@ -1,3 +1,28 @@
+`use strict`;
+
+/**
+ * 
+ * Activating strict mode : It enables the restricted version of JavaScript.
+ * It disallow us to do certain things in JavaScript which otherwise will not through any kind of visible errors.
+ * It is introduced in ECMAScript 5.Strict mode be activated for a particular function or entire file or for entire project.
+ * 
+ * Example of silent erros which will be 'restricted' in 'strict' mode :
+ * 1. Assiging values to undeclared variable will through an error.
+ * 2. Deleting a non-deleteable property will through an error.
+ * 3. Duplicating a parameter name in a function will through an error.
+ * 
+ * 
+ * Benefits of Scrict mode : 
+ * 1. Sometimes code can run faster.
+ * 2. Prohibits some syntex likely to be defined in future versions of ECMAscript ex 'eval', 'argument', 'interface' , 'private' etc
+ * 
+ * 
+ */
+
+
+
+
+
 /**
  * In Javascript every value is either an Object value or Primitive value.
  * Javascript supports dynamic typing i.e it automatically detects the data type.
@@ -182,3 +207,74 @@ const age = 18;
 
 age >= 18 ? console.log(`You are allowed to drive`) : console.log(`You are not allowed to drive`);
 
+
+/**
+ * 
+ * Functions : Fundamental building block of any programming language to write a reuseable code.
+ * 
+ * Key points : 
+ * 1. Function declared must have a name.
+ * 2. When declared in global scope , a function becomes global function.
+ * 3. Functions are hoisted to top of their scope i.e we can call the function before it is defined in the code.
+ * 
+ * 
+ */
+
+function funOne(){ // Creating a function 
+    console.log('Simplest function possible');
+}
+
+funOne() // executing a function
+funOne() // we can call the function as many time we want
+
+
+/**
+ * 
+ * Function Expressions / Ananymous Function : A function with no name which produces a value. 
+ * 
+ * Key points / difference from functions : 
+ * 1. Function expressions are not hoisted.They are created at the run time when te execution reches the defination.
+ * 2. Function expressions can be anonymous or named.
+ * 3. Function Expressions Useful for recursion and debugging.
+ * 4. Function Expressions are often assigned to variables, which can then be used to call the function.
+ * 5. Function Expressions can be passed to other functions as an argument.
+ * 
+ */
+
+const calcAge = function(yob){
+    return 2024 - yob;
+}
+
+console.log(calcAge(1990));
+
+
+/**
+ * 
+ * Arrow Function : Introduced in ECMAScript 6 (ES6), provide a more concise syntax for writing function expressions. 
+ * 1. Arrow function explicitly returns the result.
+ * 
+ * 
+ */
+
+  const calAge1 = yob => 2024 - yob;
+  //variable name = argument => code;
+  const sum = (a,b,c) => a+b+c;
+
+  const mul = (a,b,c) => {
+    a += b*c;
+    return a*b*c;
+  }
+
+  console.log(mul(3,2,1));
+  console.log(sum(23,34,45));
+
+  console.log(calAge1(1990));
+
+
+  /**
+   * 
+   * Function calling other function : 
+   * 
+   * 
+   * 
+   */
