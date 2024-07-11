@@ -312,4 +312,144 @@ console.log(list.length - 1); // getting the length of the array
  *
  * Basic Array functions :
  *
+ * Push function :
+ * 1. Adds a new data to the end of the list.
+ * 2. Returns the new lenght of the array.
+ *
  */
+
+listTwo.push("A new data");
+console.log(listTwo);
+
+/**
+ *
+ * Unshift Function :
+ * 1. Adds a new data to the begining of the array.
+ * 2. Returns the new lenght of the arra.
+ *
+ */
+console.log(listTwo.length); // Old length
+console.log(listTwo.unshift("A new data at the beginig of Array")); // New length after unshift.
+
+/**
+ *
+ * Pop Function :
+ * 1. Removes the last element of the Array.
+ * 2. Returns the new removed Element of the Array.
+ *
+ */
+
+console.log(listTwo.pop()); // returns the returned alement of the array.
+console.log(listTwo); // updated list after pop
+
+/**
+ *
+ * Shift Function :
+ * 1. Removes the first element of Array.
+ * 2. Returns the removed item of the array.
+ *
+ */
+
+console.log(listTwo.shift()); // returns the removed item.
+
+/**
+ *
+ * indexOf function :
+ * 1. Function returns the index of the element.
+ *
+ *
+ *
+ */
+
+console.log(listTwo); // returns entire list
+console.log(listTwo.indexOf(5)); // return the index of 5 (starting from 0)
+console.log(listTwo.indexOf(3)); // return -1 of the element not found in the array.
+
+/**
+ *
+ * includes function :
+ * 1. Returns true / false based on the result of the search.
+ * 2. It uses 'Strict (===)' comparision.
+ */
+
+console.log(listTwo.includes(5)); // return true
+console.log(listTwo.includes(2)); // return false
+
+/**
+ *
+ * Objects : JavaScript objects are collections of key-value pairs.
+ * Each key (or property) has a corresponding value. Values can be
+ * primitives (like numbers or strings), other objects, or functions
+ *
+ *
+ * Question : Comparision / difference between Object  & Arrays
+ */
+
+const dataObj = {
+  // key : value
+  firstName: "Tarun",
+  lastName: "Chauhan",
+  yob: 1990,
+  age: function () {
+    return new Date().getFullYear() - this.yob;
+  },
+  skills: ["PHP", "JavaScript", "Laravel", "AJAX", "jQuery", "React"],
+};
+
+console.log(dataObj);
+
+/**
+ *
+ * Accessing Object data :
+ * 1. Since we are using the 'key : value' pair, the order of the object's property doesn't matter.
+ * 2. To access any values from the object we'll use the key.
+ * 3. To access the value we can use either 'dot' or 'bracket' notation.
+ *
+ */
+
+console.log(dataObj.firstName); // dot notation
+console.log(dataObj.age()); // bracket notation
+const nameKey = "Name";
+console.log(dataObj[`last${nameKey}`]); // we can use 'expressions' in bracket notation but not in dot notation
+
+/**
+ *
+ * Iteration : For loop
+ *
+ */
+
+for (let i = 0; i < 10; i++) {
+  console.log(`Loop no ${i}`);
+}
+
+/**
+ *
+ * Looping Arrays , break & continue
+ *
+ */
+
+const nameList = [
+  "Tarun Chauhan",
+  "Anirudh Chauhan",
+  "Priya Chauhan",
+  "Hope Chauhan",
+  "Varun Chauhan",
+];
+// Running loop through all of the array
+for (let i = 0; i <= nameList.length - 1; i++) {
+  console.log(nameList[i]);
+}
+// skipping the loop when a condition is met
+for (let i = 0; i <= nameList.length - 1; i++) {
+  if (nameList[i] === "Priya Chauhan") {
+    continue;
+  }
+  console.log(nameList[i]);
+}
+// exiting the loop when a condition is met
+for (let i = 0; i <= nameList.length - 1; i++) {
+  if (nameList[i] === "Hope Chauhan") {
+    break;
+  }
+  console.log(nameList[i]);
+}
