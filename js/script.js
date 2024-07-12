@@ -453,3 +453,43 @@ for (let i = 0; i <= nameList.length - 1; i++) {
   }
   console.log(nameList[i]);
 }
+
+/**
+ *
+ * DOM & DOM manipulation :
+ *
+ * DOM : Document Object Model - Structured representation of a HTML document , it allows JavaScript to access
+ * elements of HTML in order to manipulate them.
+ * 1. Using DOM manipulation we can change HTML & CSS of the page.
+ * 2. As soon as a HTML page is loaded the browser creates a tree structure of thee elements and ecah element is an object.
+ *
+ */
+
+/**
+ *
+ * Theory Section
+ *
+ * JavaScript's properties :
+ * 1. High-Level : No need to worry about resources allocation.
+ *                 Downside : the program will never be as fast as a low level programming langauge like c++.
+ * 2. Prototype-based Object-Oriented : Everything in JavaScript is an object , exept primitive values.
+ *                    Everything is derived from the prototypes and has some methods to it. ec array , objects etc.
+ * 3. Multi-paradigm : Code can be structured in many ways as per the experiance and requirement.
+ *                    (Procedural/ Object-oriented & Functional programming)
+ * 4. Just-in-time compiled
+ * 5. First class functions : Functions are treated as variables , and functions can be passed to other
+ *                            functions and a function can return other functions.
+ * 6. Single Threaded
+ * 7. Garbage collection : Feature of JavaScript engine which automatically removed the unsed variable/data ,
+ *                        this improves the app performance.
+ * 8.Dynamic : We don't need to declare data types while declaring a variable, data type is changes automatically.
+ *
+ */
+
+/**
+ *
+ * Data Structure in JavaScript :
+ *
+ *
+ *
+ */
