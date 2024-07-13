@@ -490,6 +490,49 @@ for (let i = 0; i <= nameList.length - 1; i++) {
  *
  * Data Structure in JavaScript :
  *
- *
+ * Array Destructuring : Introduced in ES6 it is a method of unpacking values of an Array.
  *
  */
+
+const numArray = [0, 1, 2];
+// old method
+const zero = numArray[0];
+const one = numArray[1];
+const two = numArray[2];
+// ES6 method
+
+const [aa, bb, cc] = numArray;
+
+console.log(aa, bb, cc);
+
+/**
+ *
+ * Destructuring Objects : Unpacking Objects.
+ *
+ */
+
+const infoObj = {
+  fullName: "Tarun Chauhan",
+  state: "Himachal Pradesh",
+  skills: {
+    backend: ["PHP", "MySQL", "Laravel"],
+    frontend: ["HTML & CSS", "JavaScript", "ReactJS"],
+    other: ["DSA", "Linux"],
+  },
+};
+
+// Unpacking object
+const { fullName, state, skills } = infoObj;
+
+console.log(fullName, state, skills);
+
+// Giving custom names
+
+const { fullName: yourName, state: yourState, skills: yourSkills } = infoObj;
+
+console.log(yourName, yourState, yourSkills);
+
+// giving default values if data doesn't exists
+
+const { yob = null, backend = [] } = infoObj;
+console.log(yob, backend);
