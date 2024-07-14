@@ -20,6 +20,8 @@
  */
 
 /**
+ *
+ * Data Types in Javascript :
  * In Javascript every value is either an Object value or Primitive value.
  * Javascript supports dynamic typing i.e it automatically detects the data type.
  *
@@ -56,7 +58,7 @@ console.log(typeof null); // it will show `object` which is a bug and its not fi
  * Declaring variables using let,const & var :
  *
  * 1. let(ES6) : Declare `block scoped` variables which can change later while our program runs.Value assigning is not mandatory.
- * 2. const(ES6) : Declare variables which can't be changes throughout the execution of the program.Value assigning is mandatory.
+ * 2. const(ES6) : (scope ? ) Declare variables which can't be changes throughout the execution of the program.Value assigning is mandatory.
  * 3. var(lagacy) :  Declare `function scoped` variable which can be updated later and assigning value is not mandatory.
  *
  */
@@ -220,7 +222,7 @@ funOne(); // we can call the function as many time we want
 
 /**
  *
- * Function Expressions / Ananymous Function : A function with no name which produces a value.
+ * Function Expressions / Anonymous Function : A function with no name which produces a value.
  *
  * Key points / difference from functions :
  * 1. Function expressions are not hoisted.They are created at the run time when te execution reches the defination.
@@ -536,3 +538,51 @@ console.log(yourName, yourState, yourSkills);
 
 const { yob = null, backend = [] } = infoObj;
 console.log(yob, backend);
+
+// Mutating variabels with Object's data
+
+const numObj = { aaa: 1, bbb: 2, ccc: 3 };
+
+let aaa = 111;
+let bbb = 222;
+
+console.log(aaa, bbb);
+
+({ aaa, bbb } = numObj);
+
+console.log(aaa, bbb);
+
+/**
+ *
+ * Spread Operator :
+ *
+ */
+
+const arrayOne = [4, 5, 6, 7, 8, 9];
+
+console.log(...arrayOne);
+
+const arrayTwo = [1, 2, ...arrayOne];
+
+console.log(arrayTwo);
+
+/**
+ *
+ * Rest pattren and Parameters
+ *
+ */
+
+const [x, , z, ...other] = arrayOne; // leaving empty to skip an element of array
+console.log(x, z, other);
+
+const add = function (...params) {
+  let sum = 0;
+  for (let i = 0; i < params.length; i++) {
+    sum += params[i];
+  }
+  console.log(sum);
+};
+
+add(1, 2);
+add(3, 4, 5, 6, 7);
+add(23, 35, 56, 34, 2, 324, 46, 57, 68, 78, 23);
