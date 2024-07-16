@@ -586,3 +586,24 @@ const add = function (...params) {
 add(1, 2);
 add(3, 4, 5, 6, 7);
 add(23, 35, 56, 34, 2, 324, 46, 57, 68, 78, 23);
+
+/**
+ *
+ * Short Circuiting : && and || operator
+ *
+ */
+
+console.log("" || false || "Tarun" || 0 || 1); // || will display the first truthy value it encounter while executing the expression
+console.log("1" && "1" && false && "JavaScript"); //  && will return the first Falsy value in the expression"
+
+/**
+ *
+ * Nullish Coalescing Operator :
+ *
+ */
+
+const numOfGuest = 0;
+const numOfTable = numOfGuest / 4 || 2; // It will return 2 which is logically incorrect.
+const numOfTable2 = numOfGuest / 4 ?? 2; // It will return 0 which is logically correct.
+console.log(numOfTable);
+console.log(numOfTable2);
