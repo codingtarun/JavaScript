@@ -607,3 +607,75 @@ const numOfTable = numOfGuest / 4 || 2; // It will return 2 which is logically i
 const numOfTable2 = numOfGuest / 4 ?? 2; // It will return 0 which is logically correct.
 console.log(numOfTable);
 console.log(numOfTable2);
+
+/**
+ *
+ * Looping an Array :
+ *
+ */
+
+const carList = ["Maruti 800", "WagonR", "Alto K10", "Swift Dzire", "Creta"];
+
+for (const car of carList) {
+  // returns the elements of the array
+  console.log(car);
+}
+
+for (const car of carList.entries()) {
+  // returns the array with index & element
+  console.log(...car);
+}
+
+/**
+ *
+ * Enhanced Object Literals
+ *
+ */
+
+/**
+ *
+ * Optional Chaining
+ *
+ */
+
+const workingHours = {
+  monday: {
+    open: 10,
+    close: 22,
+  },
+  friday: {
+    open: 10,
+    close: 22,
+  },
+};
+
+console.log(workingHours.monday.open);
+console.log(workingHours.tuesday?.open); // if 'tuesday' is defined then only shows 'open' value else it will return undefined
+
+/**
+ *
+ * Looping Object
+ *
+ */
+
+for (const day of Object.keys(workingHours)) {
+  console.log(day);
+}
+
+console.log(Object.keys(workingHours));
+
+console.log(Object.entries(workingHours));
+
+console.log(Object.values(workingHours));
+
+/**
+ *
+ * Sets : JavaScript Set is a built-in object that allows you to store unique values of any type,
+ * whether primitive values or object references
+ *
+ *
+ */
+
+const dataSet = new Set(["car", "bus", 1, 0, 11, 11, true, "car"]);
+
+console.log(dataSet);
