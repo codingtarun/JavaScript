@@ -679,3 +679,66 @@ console.log(Object.values(workingHours));
 const dataSet = new Set(["car", "bus", 1, 0, 11, 11, true, "car"]);
 
 console.log(dataSet);
+
+// A string is iterateable
+
+console.log(new Set("Tarun"));
+
+// Getting the size of a set
+
+console.log(dataSet.size);
+
+// check if avalue exists in a set
+
+console.log(dataSet.has("car"));
+
+console.log(dataSet.has("tarun"));
+
+// Adding a new value
+
+console.log(dataSet.add("A new data"));
+console.log(dataSet.add("Pizza"));
+console.log(dataSet.add("Pizza"));
+
+console.log(dataSet);
+
+console.log(dataSet.delete("car"));
+console.log(dataSet);
+
+/**
+ *
+ * Maps : JavaScript Map objects are a collection of key-value pairs where the keys can be of any type, including objects.
+ *        They maintain the order of their elements, which means that insertion order is preserved.
+ *        This makes Map objects distinct from plain JavaScript objects, which only allow strings and symbols as keys and
+ *        do not guarantee order.
+ *
+ */
+
+const carsMapList = new Map();
+console.log(carsMapList.set(1, "Maruti 800")); // Adding a new set to the map list will return the updated map.
+console.log(carsMapList.set(2, "Wagon R VXI"));
+console.log(carsMapList.set(3, "Maruti Alto k10"));
+
+// Map set method chaining
+
+console.log(carsMapList.set(4, "Suzuki Dzire").set(5, "Create"));
+console.log(
+  carsMapList
+    .set(true, "isEligibleForDriving")
+    .set(false, "notEligibleForDriving")
+);
+// Display data from a map using get
+
+console.log(carsMapList.get(4));
+console.log(carsMapList.get(true));
+
+console.log(carsMapList.get(3 > 4)); // we can also use expression as a key
+
+// Delete a value
+
+console.log(carsMapList.delete(1)); // returns true / false
+
+// Clear the map
+carsMapList.clear();
+
+console.log(carsMapList);
