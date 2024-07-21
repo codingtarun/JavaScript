@@ -742,3 +742,46 @@ console.log(carsMapList.delete(1)); // returns true / false
 carsMapList.clear();
 
 console.log(carsMapList);
+
+// using arry as the key
+const arr = [1, 2];
+
+console.log(carsMapList.set(arr, "Mahindra Bolero Pickup")); // setting the data with array key
+console.log(carsMapList.get(arr)); // getting the data with array key
+
+// Using DOM element object to as a key
+
+console.log(
+  carsMapList.set(document.querySelector("h1"), "This is the heaidng") // using an object as an key
+);
+
+/**
+ *
+ * Maps Iterations :
+ *
+ */
+
+const quiz = new Map([
+  ["Question", "Which is the best programming language"],
+  [1, "PHP"],
+  [2, "C"],
+  [3, "JavaScript"],
+  ["Answer", 3],
+  [true, "Correct Answer"],
+  [false, "Incorrect Answer"],
+]);
+
+console.log(quiz);
+
+// show question
+
+console.log(quiz.get("Question"));
+
+// Display answers , whiose key type in number only
+for (const [key, value] of quiz) {
+  if (typeof key === "number") console.log(key, value);
+}
+
+const answer = Number(prompt("Enter your answer"));
+
+console.log(quiz.get(answer === quiz.get("Answer")));
