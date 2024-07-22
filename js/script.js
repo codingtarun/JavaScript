@@ -782,6 +782,33 @@ for (const [key, value] of quiz) {
   if (typeof key === "number") console.log(key, value);
 }
 
-const answer = Number(prompt("Enter your answer"));
+const answer = 3; //Number(prompt("Enter your answer"));
 
 console.log(quiz.get(answer === quiz.get("Answer")));
+
+/**
+ *
+ * A closer look at functions
+ *
+ */
+
+const bookingList = [];
+
+const bookingFun = function (
+  numOfPerson = 1,
+  flightNum = 111,
+  totalAmount = 100
+) {
+  const bookingObj = {
+    numOfPerson,
+    flightNum,
+    totalAmount,
+  };
+
+  console.log(bookingObj);
+  bookingList.push(bookingObj);
+};
+
+bookingFun(2, 22, 322);
+bookingFun();
+console.log(bookingList);
